@@ -55,9 +55,9 @@ public class StartController {
         double totalPages = (double)totalRows/ (double)pageSize;
 
         if((totalPages % 1) != 0){
-            totalPages = (int)Math.round(totalPages);
-            logger.info("totalPages2 >>>>>>>>>>>>>>>>>"+ totalPages);
-            model.addAttribute("totalPages", totalPages);
+            int totalPages2 = (int)Math.round(totalPages);
+            logger.info("totalPages2 >>>>>>>>>>>>>>>>>"+ totalPages2);
+            model.addAttribute("totalPages", totalPages2);
         }
         if((totalPages % 1) == 0){
             logger.info("totalPages >>>>>>>>>>>>>>>>>"+ totalPages);
