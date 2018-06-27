@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e855ef0-5481-4a6c-9633-92d7459190d1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -346,12 +346,12 @@
       <workItem from="1530040579705" duration="15010000" />
       <workItem from="1530119592596" duration="724000" />
       <workItem from="1530130561685" duration="274000" />
-      <workItem from="1530131342457" duration="4278000" />
+      <workItem from="1530131342457" duration="4962000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289628000" />
+    <option name="totallyTimeSpent" value="290312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -766,7 +766,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Hibernate (aeswebshop)|Hibernate</last-edited>
+          <last-edited>Hibernate</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -801,7 +801,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>aeswebshop</last-edited>
+          <last-edited>Web|springMvc</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
