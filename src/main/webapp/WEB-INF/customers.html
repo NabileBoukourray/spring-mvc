@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>customers</title>
+    <link rel="stylesheet" href="/resources/dist/bundle.css">
+</head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+<div class="container my-sm-5">
+    <span class="display-4 lead"> JQuery Pagination</span>
+    <input id="totalPagesId" type="hidden" th:value="${totalPages}"/>
+    <div class="container my-sm-5">
+        <table id="myTableId" class="table table-bordered small">
+            <thead>
+            <tr>
+                <td scope="col">customer_id</td>
+                <td scope="col">store_id</td>
+                <td scope="col">first_name</td>
+                <td scope="col">last_name</td>
+                <td scope="col">email</td>
+                <td scope="col">address_id</td>
+                <td scope="col">active</td>
+                <td scope="col">create_date</td>
+                <td scope="col">last_update</td>
+            </tr>
+            </thead>
+            <tbody id="page-content">
+
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <ul id="pagination-demo" class="pagination-sm"></ul>
+    </div>
+</div>
+<div th:replace="fragments/footer :: footer"></div>
+<script src="/resources/dist/bundle.js"></script>
+</body>
+</html>

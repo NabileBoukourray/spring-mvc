@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+
+<footer class="footer sticky-bottom bg-white" th:fragment="footer">
+    <div class="container">
+            <div class="container border border-right-0 border-left-0 border-bottom-0 border-top ">
+                <div class="container py-sm-4">
+                    <div class="row">
+                        <div class="col-sm">
+                            <ul class="list-group">
+                                <li class="list-group-item m-0 p-0 border border-0"><span
+                                        class="font-weight-bold">spring mvc</span></li>
+                                <li class="list-group-item m-0 p-0 border border-0"><a class="a-href color-grey-700"
+                                                                                       href="#" th:href="@{/}">start</a>
+                                <li class="list-group-item m-0 p-0 border border-0"><a class="a-href color-grey-700"
+                                                                                       href="#" th:href="@{/customers}">customers</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>
