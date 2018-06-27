@@ -1,1 +1,10 @@
-node_modules
+node_modules/
+
+front-end/package-lock.json
+
+.idea/workspace.xml
+
+.gitignore
+
+
+
