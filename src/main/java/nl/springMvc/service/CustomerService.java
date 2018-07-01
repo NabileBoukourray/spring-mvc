@@ -1,4 +1,4 @@
-package nl.springMvc.Service;
+package nl.springMvc.service;
 
 import nl.springMvc.entity.Customer;
 import nl.springMvc.repository.CustomerRepository;
@@ -25,7 +25,12 @@ public class CustomerService {
     }
 
     @Transactional
-    public int countCustomers(){
-        return  customerRepository.countCustomers();
+    public List<Customer> findcustomers2(int start, int maxRows, String iSortCol, String sSortDir, String whereClause){
+        return customerRepository.findcustomers2(start, maxRows, iSortCol, sSortDir, whereClause);
+    }
+
+    @Transactional
+    public int countCustomers(String whereClause){
+        return  customerRepository.countCustomers(whereClause);
     }
 }

@@ -1,10 +1,6 @@
 node_modules/
 
-front-end/package-lock.json
-
+/.idea/
 .idea/workspace.xml
 
-.gitignore
-
-
-
+front-end/package-lock.json

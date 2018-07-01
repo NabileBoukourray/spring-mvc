@@ -11,7 +11,8 @@
     <span class="display-4 lead"> JQuery Pagination</span>
     <input id="totalPagesId" type="hidden" th:value="${totalPages}"/>
     <div class="container my-sm-5">
-        <table id="myTableId" class="table table-bordered small">
+        <p  th:if="${empty}">No results found...</p>
+        <table id="myTableId" class="table table-bordered small invisible" th:unless="${empty}">
             <thead>
             <tr>
                 <td scope="col">customer_id</td>
@@ -31,7 +32,7 @@
         </table>
     </div>
     <div class="container">
-        <ul id="pagination-demo" class="pagination-sm"></ul>
+        <ul id="pagination-demo" class="pagination-sm"  th:unless="${empty}"></ul>
     </div>
 </div>
 <div th:replace="fragments/footer :: footer"></div>

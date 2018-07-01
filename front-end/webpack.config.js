@@ -36,6 +36,18 @@ const config = {
                     }
                 }]
             },
+            {
+                test: /.*\.(gif|png|jpe?g)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options:{
+                            outputPath: 'img/',
+                            publicPath: '../dist/img/'
+                        }
+                    }
+                ]
+            }
         ]
     },
     plugins: [

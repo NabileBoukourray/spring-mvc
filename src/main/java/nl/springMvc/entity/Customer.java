@@ -1,33 +1,35 @@
 package nl.springMvc.entity;
 
+import nl.springMvc.Utils;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="customer")
+@Table(name = "customer")
 public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="customer_id")
+    @Column(name = "customer_id")
     private int customer_id;
 
-    @Column(name="store_id")
+    @Column(name = "store_id")
     private int store_id;
 
-    @Column(name="first_name")
+    @Column(name = "first_name")
     private String first_name;
 
-    @Column(name="last_name")
+    @Column(name = "last_name")
     private String last_name;
 
-    @Column(name="email")
+    @Column(name = "email")
     private String email;
 
-    @Column(name="address_id")
+    @Column(name = "address_id")
     private int address_id;
 
-    @Column(name="active")
+    @Column(name = "active")
     private boolean active;
 
     @Column(name = "create_date")
@@ -96,34 +98,21 @@ public class Customer {
         this.active = active;
     }
 
-    public Date getCreate_date() {
-        return create_date;
+    public String getCreate_date() {
+        return Utils.parseDateDMY(create_date);
     }
 
     public void setCreate_date(Date create_date) {
         this.create_date = create_date;
     }
 
-    public Date getLast_update() {
-        return last_update;
+    public String getLast_update() {
+        return Utils.parseDateDMY(last_update);
     }
 
     public void setLast_update(Date last_update) {
         this.last_update = last_update;
     }
 
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "customer_id=" + customer_id +
-                ", store_id=" + store_id +
-                ", first_name='" + first_name + '\'' +
-                ", last_name='" + last_name + '\'' +
-                ", email='" + email + '\'' +
-                ", address_id=" + address_id +
-                ", active=" + active +
-                ", create_date=" + create_date +
-                ", last_update=" + last_update +
-                '}';
-    }
+
 }
