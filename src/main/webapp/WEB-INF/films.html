@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>films</title>
+    <link rel="stylesheet" href="/resources/dist/bundle.css">
+</head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+<div class="container my-sm-5">
+    <span class="display-4 lead">Films</span>
+    <input id="totalPagesId" type="hidden" th:value="${totalPages}"/>
+    <div class="container my-sm-5">
+        <p  th:if="${empty}">No results found...</p>
+        <table id="myTableId" class="table table-bordered small invisible" th:unless="${empty}">
+            <thead>
+            <tr>
+                <td scope="col">film_id</td>
+                <td scope="col">title</td>
+                <td scope="col">description</td>
+                <td scope="col">special_features</td>
+                <td scope="col">release_year</td>
+                <td scope="col">length</td>
+                <td scope="col">last_update</td>
+            </tr>
+            </thead>
+            <tbody id="page-content">
+
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <ul id="pagination-demo" class="pagination-sm"  th:unless="${empty}"></ul>
+    </div>
+</div>
+<div th:replace="fragments/footer :: footer"></div>
+<script src="/resources/dist/bundle.js"></script>
+</body>
+</html>

@@ -9,17 +9,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
 import java.util.logging.Logger;
 
 @Controller
-public class DatatablesController {
+public class CustomerController {
 
     private Logger logger = Logger.getLogger(getClass().getName());
     private final CustomerService customerService;
 
     @Autowired
-    public DatatablesController(CustomerService customerService) {
+    public CustomerController(CustomerService customerService) {
         this.customerService = customerService;
     }
 
@@ -29,7 +28,7 @@ public class DatatablesController {
         binder.registerCustomEditor(String.class, stringTrimmerEditor);
     }
 
-    @GetMapping("/datatables")
+    @GetMapping("/customers")
     public String datatables(@RequestParam(name = "customer_id", required = false) Integer customer_id,
                              @RequestParam(name = "email", required = false) String email,
                              @RequestParam(name = "first_name", required = false) String first_name,
@@ -39,16 +38,16 @@ public class DatatablesController {
         CustomerDTO  customerDTO = new CustomerDTO(customer_id, first_name, last_name, email);
         model.addAttribute("customerDTO",  customerDTO);
         model.addAttribute("datatablesUrl", getUrlWithParams("/api/customers/page", customerDTO));
-        return "datatables";
+        return "customers";
     }
 
-    @PostMapping("/datatables")
+    @PostMapping("/customers")
     public String formProcessing(@ModelAttribute(name ="customerDTO") CustomerDTO customerDTO, RedirectAttributes redirectAttributes) {
         redirectAttributes.addAttribute("customer_id", customerDTO.getCustomer_id());
         redirectAttributes.addAttribute("email", customerDTO.getEmail());
         redirectAttributes.addAttribute("first_name", customerDTO.getFirst_name());
         redirectAttributes.addAttribute("last_name", customerDTO.getLast_name());
-        return "redirect:/datatables";
+        return "redirect:/customers";
     }
 
     @GetMapping("/api/customers/page")

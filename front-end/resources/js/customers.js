@@ -1,51 +1,34 @@
 import $ from "jquery";
-import axios from "axios";
+import Dutch from "./../i18n/Dutch"
 
-$(function(){
-    const totalPages = $("#totalPagesId").val();
+$(function () {
 
-
-    if(totalPages >= 1) {
-        $('#pagination-demo').twbsPagination({
-            totalPages: totalPages,
-            visiblePages: 10,
-            onPageClick: function (event, num) {
-
-                axios.get('/api/customers',
-                    {
-                        params: {
-                            page: num,
-                            size: 10
-                        }
-                    })
-                    .then(function (response) {
-                        //if response not empty
-
-                        let ht = "";
-
-                        response.data.map(customer => {
-                            ht += "" +
-                                "<tr>" +
-                                "<td>" + customer.customer_id + "</td>" +
-                                "<td>" + customer.store_id + "</td>" +
-                                "<td>" + customer.first_name + "</td>" +
-                                "<td>" + customer.last_name + "</td>" +
-                                "<td>" + customer.email + "</td>" +
-                                "<td>" + customer.address_id + "</td>" +
-                                "<td>" + customer.active + "</td>" +
-                                "<td>" + customer.create_date + "</td>" +
-                                "<td>" + customer.last_update + "</td>";
-                        });
-                        $('#page-content').html(ht);
-
-                    }).then(()=>{
-                        $("#myTableId").removeClass("invisible");
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                    });
-
+    const datatablesUrl = $("#datatablesUrl").val();
+    var table = $("#customersDtId").DataTable({
+        //"bProcessing": true,
+        "responsive": true,
+        "language": Dutch,
+        "bServerSide": true,
+        "sAjaxSource": datatablesUrl,
+        "searching": false,
+        "deferRender": true,
+        "aLengthMenu": [10, 25, 50],
+        "aoColumns": [
+            {"mData": "customer_id"},
+            {"mData": "store_id", "bSortable": true},
+            {"mData": "first_name"},
+            {"mData": "last_name"},
+            {"mData": "email"},
+            {"mData": "address_id"},
+            {"mData": "active"},
+            {"mData": "create_date"},
+            {"mData": "last_update"}
+        ],
+        columnDefs: [ {
+            targets: 4,
+            render: (data)=>{
+                return "<p>"+data+"</p>"
             }
-        });
-    }
+        } ]
+    });
 });

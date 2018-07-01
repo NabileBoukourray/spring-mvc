@@ -12,10 +12,12 @@ import java.util.logging.Logger;
 @Repository
 public class CustomerRepository {
 
-    Logger logger = Logger.getLogger(getClass().getName());
+    private SessionFactory sessionFactory;
 
     @Autowired
-    private SessionFactory sessionFactory;
+    public CustomerRepository(SessionFactory sessionFactory){
+        this.sessionFactory = sessionFactory;
+    }
 
     public List<Customer> findAll(){
         Session session = sessionFactory.getCurrentSession();
