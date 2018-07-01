@@ -4186,15 +4186,15 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 
 /***/ }),
 
-/***/ "./resources/js/customers-datatables.js":
-/*!**********************************************!*\
-  !*** ./resources/js/customers-datatables.js ***!
-  \**********************************************/
+/***/ "./resources/js/customers.js":
+/*!***********************************!*\
+  !*** ./resources/js/customers.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nvar _Dutch = __webpack_require__(/*! ./../i18n/Dutch */ \"./resources/i18n/Dutch.js\");\n\nvar _Dutch2 = _interopRequireDefault(_Dutch);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _jquery2.default)(function () {\n\n    var datatablesUrl = (0, _jquery2.default)(\"#datatablesUrl\").val();\n    var table = (0, _jquery2.default)(\"#customersDtId\").DataTable({\n        //\"bProcessing\": true,\n        \"responsive\": true,\n        \"language\": _Dutch2.default,\n        \"bServerSide\": true,\n        \"sAjaxSource\": datatablesUrl,\n        \"searching\": false,\n        \"deferRender\": true,\n        \"aLengthMenu\": [10, 25, 50],\n        \"aoColumns\": [{ \"mData\": \"customer_id\" }, { \"mData\": \"store_id\", \"bSortable\": true }, { \"mData\": \"first_name\" }, { \"mData\": \"last_name\" }, { \"mData\": \"email\" }, { \"mData\": \"address_id\" }, { \"mData\": \"active\" }, { \"mData\": \"create_date\" }, { \"mData\": \"last_update\" }],\n        columnDefs: [{\n            targets: 4,\n            render: function render(data) {\n                return \"<p>\" + data + \"</p>\";\n            }\n        }]\n    });\n});\n\n//# sourceURL=webpack:///./resources/js/customers-datatables.js?");
+eval("\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nvar _Dutch = __webpack_require__(/*! ./../i18n/Dutch */ \"./resources/i18n/Dutch.js\");\n\nvar _Dutch2 = _interopRequireDefault(_Dutch);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _jquery2.default)(function () {\n\n    var datatablesUrl = (0, _jquery2.default)(\"#datatablesUrl\").val();\n    var table = (0, _jquery2.default)(\"#customersDtId\").DataTable({\n        //\"bProcessing\": true,\n        \"responsive\": true,\n        \"language\": _Dutch2.default,\n        \"bServerSide\": true,\n        \"sAjaxSource\": datatablesUrl,\n        \"searching\": false,\n        \"deferRender\": true,\n        \"aLengthMenu\": [10, 25, 50],\n        \"aoColumns\": [{ \"mData\": \"customer_id\" }, { \"mData\": \"store_id\", \"bSortable\": true }, { \"mData\": \"first_name\" }, { \"mData\": \"last_name\" }, { \"mData\": \"email\" }, { \"mData\": \"address_id\" }, { \"mData\": \"active\" }, { \"mData\": \"create_date\" }, { \"mData\": \"last_update\" }],\n        columnDefs: [{\n            targets: 4,\n            render: function render(data) {\n                return \"<p>\" + data + \"</p>\";\n            }\n        }]\n    });\n});\n\n//# sourceURL=webpack:///./resources/js/customers.js?");
 
 /***/ }),
 
@@ -4218,7 +4218,7 @@ eval("\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquer
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\n__webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n\n__webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n\n__webpack_require__(/*! twbs-pagination/jquery.twbsPagination */ \"./node_modules/twbs-pagination/jquery.twbsPagination.js\");\n\n__webpack_require__(/*! datatables.net-bs4 */ \"./node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js\");\n\n__webpack_require__(/*! ./customers-datatables */ \"./resources/js/customers-datatables.js\");\n\n__webpack_require__(/*! ./films */ \"./resources/js/films.js\");\n\n//# sourceURL=webpack:///./resources/js/main.js?");
+eval("\n\n__webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\n__webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n\n__webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n\n__webpack_require__(/*! twbs-pagination/jquery.twbsPagination */ \"./node_modules/twbs-pagination/jquery.twbsPagination.js\");\n\n__webpack_require__(/*! datatables.net-bs4 */ \"./node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js\");\n\n__webpack_require__(/*! ./customers */ \"./resources/js/customers.js\");\n\n__webpack_require__(/*! ./films */ \"./resources/js/films.js\");\n\n//# sourceURL=webpack:///./resources/js/main.js?");
 
 /***/ }),
 

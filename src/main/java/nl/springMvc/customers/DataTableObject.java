@@ -1,4 +1,4 @@
-package nl.springMvc.datatables;
+package nl.springMvc.customers;
 
 import nl.springMvc.entity.Customer;
 import java.util.List;

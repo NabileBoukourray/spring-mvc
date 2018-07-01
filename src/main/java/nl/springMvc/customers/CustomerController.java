@@ -1,4 +1,4 @@
-package nl.springMvc.datatables;
+package nl.springMvc.customers;
 
 import nl.springMvc.service.CustomerService;
 import org.apache.commons.lang3.StringUtils;

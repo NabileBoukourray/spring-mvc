@@ -1,4 +1,4 @@
-package nl.springMvc.datatables;
+package nl.springMvc.customers;
 
 public abstract class DTColumns {
 

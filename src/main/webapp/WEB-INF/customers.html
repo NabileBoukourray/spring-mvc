@@ -10,7 +10,7 @@
 <div class="customers-container my-sm-3">
     <span class="display-4 lead">Customers</span>
     <div class="my-sm-5">
-        <form class="card-body shadow-sm p-sm-5" action="#" method="post" th:action="@{/datatables}" th:object="${customerDTO}">
+        <form class="card-body shadow-sm p-sm-5" action="#" method="post" th:action="@{/customers}" th:object="${customerDTO}">
             <input type="hidden" id="datatablesUrl" th:value="${datatablesUrl}"/>
             <div class="form-row col-sm-12">
                 <div class="col-sm-12 col-lg-6 mt-sm-3">
