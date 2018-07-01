@@ -10,7 +10,7 @@
 <div class="customers-container my-sm-3">
     <span class="display-4 lead">Customers</span>
     <div class="my-sm-5">
-        <form class="card-body shadow-sm bg-color-grey-400 p-sm-5" action="#" method="post" th:action="@{/datatables}" th:object="${customerDTO}">
+        <form class="card-body shadow-sm p-sm-5" action="#" method="post" th:action="@{/datatables}" th:object="${customerDTO}">
             <input type="hidden" id="datatablesUrl" th:value="${datatablesUrl}"/>
             <div class="form-row col-sm-12">
                 <div class="col-sm-12 col-lg-6 mt-sm-3">
@@ -35,7 +35,7 @@
             </div>
             <div class="form-row mt-sm-5 col-sm-12 col-lg-12">
                 <div class="col-sm-12 offset-lg-6 col-lg-6">
-                    <input type="submit" class="btn bg-white btn-block" value="search"/>
+                    <input type="submit" class="btn btn-primary btn-block" value="search"/>
                 </div>
             </div>
         </form>
