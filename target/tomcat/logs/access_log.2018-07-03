@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [03/Jul/2018:00:00:04 +0200] "GET /form HTTP/1.1" 200 8161 http-bio-8087-exec-7 15
+0:0:0:0:0:0:0:1 - - [03/Jul/2018:00:00:04 +0200] "GET /resources/dist/bundle.css HTTP/1.1" 200 227186 http-bio-8087-exec-7 7
+0:0:0:0:0:0:0:1 - - [03/Jul/2018:00:00:05 +0200] "GET /resources/dist/bundle.js HTTP/1.1" 200 1562602 http-bio-8087-exec-2 80
+0:0:0:0:0:0:0:1 - - [03/Jul/2018:00:00:12 +0200] "GET /form HTTP/1.1" 200 8161 http-bio-8087-exec-4 15
+0:0:0:0:0:0:0:1 - - [03/Jul/2018:00:00:12 +0200] "GET /resources/dist/bundle.css HTTP/1.1" 200 227186 http-bio-8087-exec-4 6
+0:0:0:0:0:0:0:1 - - [03/Jul/2018:00:00:12 +0200] "GET /resources/dist/bundle.js HTTP/1.1" 200 1562602 http-bio-8087-exec-4 35
+0:0:0:0:0:0:0:1 - - [03/Jul/2018:00:01:13 +0200] "GET /form HTTP/1.1" 200 8161 http-bio-8087-exec-8 18
+0:0:0:0:0:0:0:1 - - [03/Jul/2018:00:01:13 +0200] "GET /resources/dist/bundle.css HTTP/1.1" 200 227186 http-bio-8087-exec-8 7
+0:0:0:0:0:0:0:1 - - [03/Jul/2018:00:01:13 +0200] "GET /resources/dist/bundle.js HTTP/1.1" 200 1562602 http-bio-8087-exec-9 104
+0:0:0:0:0:0:0:1 - - [03/Jul/2018:00:01:34 +0200] "GET /form HTTP/1.1" 200 8161 http-bio-8087-exec-5 12
+0:0:0:0:0:0:0:1 - - [03/Jul/2018:00:01:34 +0200] "GET /resources/dist/bundle.css HTTP/1.1" 200 227186 http-bio-8087-exec-5 6
+0:0:0:0:0:0:0:1 - - [03/Jul/2018:00:01:34 +0200] "GET /resources/dist/bundle.js HTTP/1.1" 200 1562602 http-bio-8087-exec-10 79
+0:0:0:0:0:0:0:1 - - [03/Jul/2018:00:02:51 +0200] "GET /form HTTP/1.1" 500 3766 http-bio-8087-exec-1 136
+0:0:0:0:0:0:0:1 - - [03/Jul/2018:00:02:57 +0200] "GET /form HTTP/1.1" 500 3766 http-bio-8087-exec-2 6
+0:0:0:0:0:0:0:1 - - [03/Jul/2018:00:03:42 +0200] "GET /form HTTP/1.1" 500 3766 http-bio-8087-exec-1 242
+0:0:0:0:0:0:0:1 - - [03/Jul/2018:00:03:47 +0200] "GET /form HTTP/1.1" 500 3766 http-bio-8087-exec-2 11

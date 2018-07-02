@@ -33,8 +33,8 @@ public class FilmController {
         model.addAttribute("empty", totalRows == 0);
         double totalPages = (double) totalRows / (double) pageSize;
         model.addAttribute("totalPages", Utils.roundDoubleToInt(totalPages));
-        int start = (page - 1) * pageSize;
-        model.addAttribute("films", filmService.find(start, pageSize));
+        //int start = (page - 1) * pageSize;
+        //model.addAttribute("films", filmService.find(start, pageSize));
         return "films";
     }
 

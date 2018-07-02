@@ -9,11 +9,13 @@ nl\springMvc\customers\DataTableObject.class
 nl\springMvc\calendar\CalendarController.class
 nl\springMvc\customers\CustomerDTO.class
 nl\springMvc\customers\CustomerController.class
+nl\springMvc\form\FormModelAttribute.class
 nl\springMvc\Application.class
 nl\springMvc\Service\CustomerService.class
 nl\springMvc\entity\Film.class
 nl\springMvc\RootConfig.class
 nl\springMvc\repository\FilmRepository.class
 nl\springMvc\Service\FilmService.class
+nl\springMvc\form\FormController.class
 nl\springMvc\start\StartController.class
 nl\springMvc\repository\CustomerRepository.class

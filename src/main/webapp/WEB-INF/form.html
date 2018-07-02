@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <link rel="stylesheet" href="/resources/dist/bundle.css">
+</head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<div class="container my-sm-5">
+    <div class="row justify-content-md-center col-md-auto">
+        <div class="card col-sm-9 border border-0">
+            <div class="card-header bg-primary " data-toggle="collapse" data-target="#card_id">
+                <h6 class="text-white">card heading</h6>
+            </div>
+            <div class="card-body collapse show my-sm-3" id="card_id">
+                <form method="post" th:action="@{/form}" action="#" th:object="${formModelAttribute}">
+                    <div class="form-group row">
+                        <label for="naam_id" class="col-sm-3 col-form-label text-right">Naam : </label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="naam_id" name="naam" th:value="*{naam}" value=""/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bedrijf_id" class="col-sm-3 col-form-label text-right">Bedrijf : </label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="bedrijf_id" name="bedrijf" th:value="*{bedrijf}" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="startdatum_id" class="col-sm-3 col-form-label text-right">Startdatum : </label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="startdatum_id" name="startdatum" th:value="*{startdatum}" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="einddatum_id" class="col-sm-3 col-form-label text-right">Einddatum : </label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="einddatum_id" name="einddatum" th:value="*{einddatum}" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row" >
+                        <div class="col-sm-9 offset-sm-3">
+                            <div class="form-check"  >
+                                <input class="form-check-input" type="checkbox" name="options"   th:field="*{options}" value="java"/>
+                                <label class="form-check-label" >
+                                    java
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row" >
+                        <div class="col-sm-9 offset-sm-3">
+                            <div class="form-check"  >
+                                <input class="form-check-input" type="checkbox" name="options"  th:field="*{options}" value="python"/>
+                                <label class="form-check-label" >
+                                    python
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row" >
+                        <div class="col-sm-9 offset-sm-3">
+                            <div class="form-check"  >
+                                <input class="form-check-input" type="checkbox" name="options"  th:field="*{options}" value="c++"/>
+                                <label class="form-check-label" >
+                                    c++
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="form-group row">
+                        <div class="col-sm-9 offset-sm-3">
+                            <button type="submit" class="btn btn-primary btn-block">Zoeken</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-sm-5">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>naam</th>
+                <th>bedrijf</th>
+                <th>startdatum</th>
+                <th>einddatum</th>
+            </tr>
+            </thead>
+
+        </table>
+    </div>
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+<script src="/resources/dist/bundle.js"></script>
+</body>
+</html>
