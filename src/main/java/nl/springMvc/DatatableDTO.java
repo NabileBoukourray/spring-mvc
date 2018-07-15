@@ -1,27 +1,29 @@
-package nl.springMvc.customers;
+package nl.springMvc;
 
 import nl.springMvc.entity.Customer;
+
+import javax.persistence.Entity;
 import java.util.List;
 
-class DataTableObject {
+public  class DatatableDTO<T> {
 
     private int sEcho;
     private int iTotalRecords;
     private int iTotalDisplayRecords;
     private int iSortCol_0;
     private String sSortDir_0;
-    private List<Customer> aaData;
+    private List<T> aaData;
 
-    public DataTableObject() {
+
+    public DatatableDTO() {
     }
 
-    public DataTableObject(int sEcho, int iTotalRecords, int iTotalDisplayRecords, int iSortCol_0, String sSortDir_0) {
+    public DatatableDTO(int sEcho, int iTotalRecords, int iTotalDisplayRecords, int iSortCol_0, String sSortDir_0) {
         this.sEcho = sEcho;
         this.iTotalRecords = iTotalRecords;
         this.iTotalDisplayRecords = iTotalDisplayRecords;
         this.iSortCol_0 = iSortCol_0;
         this.sSortDir_0 = sSortDir_0;
-        this.aaData = aaData;
     }
 
     public int getsEcho() {
@@ -48,11 +50,11 @@ class DataTableObject {
         this.iTotalDisplayRecords = iTotalDisplayRecords;
     }
 
-    public List<Customer> getAaData() {
+    public List<T> getAaData() {
         return aaData;
     }
 
-    public void setAaData(List<Customer> aaData) {
+    public void setAaData(List<T> aaData) {
         this.aaData = aaData;
     }
 

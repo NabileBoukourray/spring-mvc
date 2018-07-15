@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>datatables</title>
     <link rel="stylesheet" href="/resources/dist/bundle.css">
 </head>
@@ -9,13 +9,20 @@
 <div th:replace="fragments/navbar :: navbar"></div>
 <div class="customers-container my-sm-3">
     <span class="display-4 lead">Customers</span>
+    <div>
+        <span th:text="${#httpServletRequest.requestURI + '?' + #strings.defaultString(#httpServletRequest.queryString, '')}"></span>
+    </div>
+    <span th:text="${url}"></span>
+
     <div class="my-sm-5">
-        <form class="card-body shadow-sm p-sm-5" action="#" method="post" th:action="@{/customers}" th:object="${customerDTO}">
-            <input type="hidden" id="datatablesUrl" th:value="${datatablesUrl}"/>
+        <form class="card-body shadow-sm p-sm-5" action="#" method="post" th:action="@{/customers}"
+              th:object="${customerDTO}">
+            <input type="hidden" id="datatablesUrl" th:value="${url}"/>
             <div class="form-row col-sm-12">
                 <div class="col-sm-12 col-lg-6 mt-sm-3">
                     <label for="customer_id">ID</label>
-                    <input id="customer_id" name="customer_id" type="number" class="form-control" th:value="*{customer_id}"/>
+                    <input id="customer_id" name="customer_id" type="number" class="form-control"
+                           th:value="*{customer_id}"/>
                 </div>
                 <div class="col-sm-12 col-lg-6 mt-sm-3">
                     <label for="email">Email</label>
@@ -30,7 +37,7 @@
                 </div>
                 <div class="col-sm-12 col-lg-6 mt-sm-3">
                     <label for="last_name">Lastname</label>
-                    <input id="last_name" name="last_name"  type="text" class="form-control" th:value="*{last_name}"/>
+                    <input id="last_name" name="last_name" type="text" class="form-control" th:value="*{last_name}"/>
                 </div>
             </div>
             <div class="form-row mt-sm-5 col-sm-12 col-lg-12">

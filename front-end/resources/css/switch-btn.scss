@@ -1,0 +1,42 @@
+.switch-btn{
+  position: relative;
+  width:200px;
+  height:30px;
+  transition: all 1000ms ease-in-out;
+  color: white;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.switch-btn> .inner{
+  width:100px;
+  height:30px;
+  background-color: #666;
+  color: #adb5bd;
+  position: absolute;
+  top:0;
+  right:0px;
+  border-radius: 30px;
+}
+
+.switch-btn.active > .inner{
+  margin-right: 100px;
+}
+
+
+
+.switch-btn.active{
+  /*background-color: #007bff;*/
+  color: white;
+  text-align: center;
+}
+
+
+.firstOption, .btn.secondOption{
+  width:100px;
+  height:30px;
+  border-radius: 30px;
+  background-color: #007bff;
+  color: white;
+}
+

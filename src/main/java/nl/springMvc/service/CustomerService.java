@@ -32,4 +32,9 @@ public class CustomerService {
     public int countCustomers(String whereClause){
         return  customerRepository.countCustomers(whereClause);
     }
+
+    @Transactional
+    public List<Customer> findByTag(String tagname){
+        return customerRepository.findByTag(tagname);
+    }
 }

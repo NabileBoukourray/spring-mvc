@@ -3,5 +3,7 @@ import "axios";
 import "bootstrap";
 import "twbs-pagination/jquery.twbsPagination";
 import "datatables.net-bs4";
+import "./jquery.autocomplete.min";
 import "./customers";
 import "./films";
+import "./switch-btn";

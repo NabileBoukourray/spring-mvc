@@ -47,4 +47,10 @@ public class CustomerRepository {
         int count = ((Long) session.createQuery("SELECT COUNT(*) FROM Customer "+whereClause).uniqueResult()).intValue();
         return count;
     }
+
+    public List<Customer> findByTag(String tagname){
+        Session session = sessionFactory.getCurrentSession();
+        Query<Customer> query = session.createQuery("FROM Customer WHERE first_name LIKE "+ tagname, Customer.class);
+        return query.getResultList();
+    }
 }

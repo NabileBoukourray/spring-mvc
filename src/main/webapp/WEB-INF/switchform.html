@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>switch</title>
+    <link rel="stylesheet" href="/resources/dist/bundle.css">
+</head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+<div class="container my-sm-5">
+    <span class="display-4 lead"> Switch</span>
+
+    <div class="d-flex justify-content-center bg-white align-items-center  h-100">
+        <!-- Button trigger modal -->
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12 d-flex justify-content-center">
+                    <button type="button" class="btn text-white bg-color-amber-500  w-25" data-toggle="modal" data-target="#mydal">
+                        Modal
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+
+
+
+    <div class="modal fade" id="mydal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title mr-sm-5" id="exampleModalLabel">Afspraak</h5>
+
+                    <div class="switch-btn shadow">
+
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-sm firstOption" disabled></button>
+                            <button class="btn btn-sm secondOption" disabled></button>
+                        </div>
+                        <button type="button" class="btn btn-sm inner"></button>
+                    </div>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+                    <form id="form_id">
+                        <div class="form-row align-items-center">
+                            <div class="d2 col-sm-12 mb-4">
+                                <label class="sr-only" for="start_id">Start</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend w-25">
+                                        <div class="input-group-text w-100">Start</div>
+                                    </div>
+                                    <div class="flatpickr-wrapper w-75">
+                                        <input id="start_id" type="text" class="form-control flatpickr js-flatpickr-time" readonly="readonly">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d3 col-sm-12 mb-4">
+                                <label class="sr-only" for="end_id">End</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend w-25">
+                                        <div class="input-group-text w-100">End</div>
+                                    </div>
+                                    <div class="flatpickr-wrapper w-75">
+                                        <input id="end_id" type="text" class="form-control flatpickr js-flatpickr-time" readonly="readonly">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-primary col-sm-12">Save</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div th:replace="fragments/footer :: footer"></div>
+<script src="/resources/dist/bundle.js"></script>
+</body>
+</html>
